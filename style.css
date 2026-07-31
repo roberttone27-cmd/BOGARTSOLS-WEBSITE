@@ -147,8 +147,16 @@ section{padding:100px 10%;}
 .section-title h2{font-size:42px;margin-top:15px;}
 .container{max-width:1100px;margin:auto;}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center;background:#050505;}
-.stat h2{color:var(--gold);font-size:56px;}
-.stat p{color:#d0d0d0;margin-top:10px;}
+.stat h2{
+    color:var(--gold);
+    font-size:56px;
+    margin-bottom:10px;
+}
+.stat p{
+    color:#d0d0d0;
+    font-size:18px;
+    line-height:1.4;
+}
 .about{background:#111;}
 .about-text{max-width:900px;margin:auto;text-align:center;font-size:20px;color:#d8d8d8;}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;}
@@ -500,6 +508,20 @@ section{
 
 @media (max-width:768px){
 
+    .ticker{
+
+    padding:14px 0;
+
+}
+
+.ticker-track{
+
+    gap:45px;
+
+    font-size:16px;
+
+}
+
 .hero{
     height:85vh;
 }
@@ -522,5 +544,83 @@ section{
     font-size:20px;
     margin-bottom:30px;
 }
+
+}
+
+/* ==========================
+   SCROLL ANIMATIONS
+========================== */
+
+.animate{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .8s ease;
+
+}
+
+.animate.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================
+   TICKER
+========================== */
+
+.ticker{
+
+    background:#C8A64B;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    padding:18px 0;
+
+}
+
+.ticker-track{
+
+    display:inline-flex;
+
+    gap:70px;
+
+    animation:ticker 28s linear infinite;
+
+    font-weight:600;
+
+    color:#111;
+
+    font-size:20px;
+
+}
+
+.ticker-track span{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+@keyframes ticker{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
 
 }

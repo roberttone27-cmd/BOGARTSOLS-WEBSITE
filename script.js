@@ -59,3 +59,77 @@ function revealOnScroll(){
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
+
+const counters = document.querySelectorAll(".counter");
+
+const animateCounters = () => {
+
+    counters.forEach(counter => {
+
+        const target = +counter.dataset.target;
+
+        let current = 0;
+
+        const increment = Math.max(1, Math.ceil(target / 100));
+
+        const updateCounter = () => {
+
+            current += increment;
+
+            if(current >= target){
+
+                current = target;
+
+            }
+
+        if(target === 200000){
+
+    counter.innerText = current.toLocaleString("ro-RO") + "+";
+
+}else if(target === 40){
+
+    counter.innerText = current + "+";
+
+}else if(target === 10){
+
+    counter.innerText = current + "+";
+
+}else{
+
+    counter.innerText = current;
+
+}
+
+            if(current < target){
+
+                requestAnimationFrame(updateCounter);
+
+            }
+
+        };
+
+        updateCounter();
+
+    });
+
+};
+
+let countersStarted = false;
+
+window.addEventListener("scroll", () => {
+
+    const stats = document.querySelector(".stats");
+
+    if(!stats || countersStarted) return;
+
+    const top = stats.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 100){
+
+        countersStarted = true;
+
+        animateCounters();
+
+    }
+
+});
