@@ -967,3 +967,13 @@ transition:opacity .6s ease, transform .6s ease;
 .advantages.show .adv-card:nth-child(6){
     transition-delay:.6s;
 }
+
+/* Secțiunea Proiecte */
+
+.projects .section-title h2{
+    color:#111;
+}
+
+.projects .section-title p{
+    color:#666;
+}
