@@ -38,16 +38,16 @@ document.querySelectorAll("nav a").forEach(link => {
 });
 const animatedElements = document.querySelectorAll(".animate");
 
-function revealOnScroll(){
+function revealOnScroll() {
 
-    animatedElements.forEach(element => {
+    animatedElements.forEach((element, index) => {
 
         const elementTop = element.getBoundingClientRect().top;
-
         const windowHeight = window.innerHeight;
 
-        if(elementTop < windowHeight - 100){
+        if (elementTop < windowHeight - 100) {
 
+            element.style.transitionDelay = (index * 0.1) + "s";
             element.classList.add("show");
 
         }
@@ -129,6 +129,54 @@ window.addEventListener("scroll", () => {
         countersStarted = true;
 
         animateCounters();
+
+    }
+
+});
+
+// LIGHTBOX
+
+const cards = document.querySelectorAll(".project-card img");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImg = document.getElementById("lightbox-img");
+
+const closeBtn = document.querySelector(".close-lightbox");
+
+cards.forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        lightbox.classList.add("active");
+
+        lightboxImg.src = img.src;
+
+    });
+
+});
+
+closeBtn.addEventListener("click", () => {
+
+    lightbox.classList.remove("active");
+
+});
+
+lightbox.addEventListener("click", e => {
+
+    if(e.target === lightbox){
+
+        lightbox.classList.remove("active");
+
+    }
+
+});
+
+document.addEventListener("keydown", e => {
+
+    if(e.key === "Escape"){
+
+        lightbox.classList.remove("active");
 
     }
 
