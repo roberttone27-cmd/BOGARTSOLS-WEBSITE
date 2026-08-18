@@ -1629,23 +1629,6 @@ transition:opacity .6s ease, transform .6s ease;
     margin-bottom:24px;
 }
 
-.service-more{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    color:var(--gold);
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:2px;
-}
-
-.service-more i{
-    transition:transform .3s ease;
-}
-
-.service-card:hover .service-more i{
-    transform:translateX(5px);
-}
 
 .services-cta{
     width:min(1200px,100%);
@@ -1894,25 +1877,6 @@ transition:opacity .6s ease, transform .6s ease;
     margin-bottom:17px;
 }
 
-.portfolio-view{
-    width:max-content;
-    border:0;
-    border-bottom:1px solid rgba(255,255,255,.55);
-    padding:0 0 7px;
-    background:none;
-    color:#fff;
-    font-family:inherit;
-    font-size:12px;
-    font-weight:700;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.portfolio-view i{
-    color:var(--gold);
-}
 
 .projects-bottom{
     margin-top:45px;
