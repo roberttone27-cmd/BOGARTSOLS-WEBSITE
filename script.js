@@ -168,7 +168,7 @@ const translations = {
         "stats.experience": "Ani de experiență",
 
         "about.kicker": "DESPRE BOGARTSOLS",
-        "about.title": "Une expérience qui se voit sur chaque <span>surface.</span>",
+        "about.title": "Experiență care se vede în fiecare <span>suprafață.</span>",
         "about.titleAccent": "suprafață.",
         "about.lead": "BOGARTSOLS oferă soluții complete pentru montajul pardoselilor profesionale, de la pregătirea suprafeței până la finisajul final.",
         "about.description": "Lucrăm pentru proiecte în care precizia, rezistența și aspectul final contează. Experiența acumulată în România și Franța ne permite să abordăm proiecte diverse, cu atenție la fiecare detaliu.",
@@ -180,7 +180,7 @@ const translations = {
         "about.cta": "Hai să discutăm despre proiectul tău",
 
         "services.kicker": "SERVICII",
-        "services.title": "Des solutions pour chaque<br><span>projet.</span>",
+        "services.title": "Soluții pentru fiecare<br><span>proiect.</span>",
         "services.titleAccent": "proiect.",
         "services.description": "Alegem soluția potrivită în funcție de spațiu, trafic, cerințele tehnice și nivelul de finisare dorit.",
         "service.epoxy.title": "Pardoseli epoxidice",
@@ -278,7 +278,7 @@ const translations = {
         "services.kicker": "SERVICES",
         "services.title": "Des solutions pour chaque<br><span>projet.</span>",
         "services.titleAccent": "projet.",
-        "services.description": "Nous choisissons la solution adaptée en fonction de l’espace, du trafic, des exigences techniques et du niveau de finition souhaité.",
+        "services.description": "Alegem soluția potrivită în funcție de spațiu, trafic, cerințele tehnice și nivelul de finisare dorit.",
         "service.epoxy.title": "Revêtements époxy",
         "service.epoxy.text": "Des solutions résistantes pour les espaces industriels, commerciaux et les zones à fort trafic.",
         "service.pvc.title": "Revêtements PVC",
