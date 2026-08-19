@@ -2172,3 +2172,36 @@ footer{
 body.lightbox-open{
     overflow:hidden;
 }
+
+
+/* ==========================================================
+   HERO — LARGE DESKTOP / MONITOR
+   Mobile sizing remains unchanged.
+========================================================== */
+
+@media (min-width: 1200px){
+
+    .hero-content{
+        max-width:1000px;
+        padding:30px;
+    }
+
+    .hero h1{
+        font-size:clamp(78px,5.2vw,112px);
+        line-height:1.02;
+        letter-spacing:-3px;
+        margin-bottom:30px;
+    }
+
+    .hero p{
+        font-size:clamp(25px,1.5vw,31px);
+        line-height:1.45;
+        margin-bottom:48px;
+    }
+
+    .hero .btn{
+        padding:19px 46px;
+        font-size:17px;
+    }
+}
+
