@@ -181,3 +181,5 @@ document.addEventListener("keydown", e => {
     }
 
 });
+
+function openProjectImage(image){const lightbox=document.getElementById("lightbox");const lightboxImg=document.getElementById("lightbox-img");if(!lightbox||!lightboxImg)return;lightboxImg.src=image.src;lightboxImg.alt=image.alt||"";lightbox.classList.add("active");}
