@@ -2241,55 +2241,6 @@ body.lightbox-open{
 
 
 
-/* ==========================================================
-   LANGUAGE SWITCH — RO / FR
-========================================================== */
-
-.header-right{
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-.language-switch{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    white-space:nowrap;
-    margin-left:4px;
-}
-
-.lang-btn{
-    appearance:none;
-    border:0;
-    background:transparent;
-    color:rgba(255,255,255,.62);
-    padding:4px 2px;
-    font:inherit;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:1px;
-    cursor:pointer;
-    display:inline-flex;
-    align-items:center;
-    gap:5px;
-    transition:.25s ease;
-}
-
-.lang-btn .flag{
-    font-size:16px;
-    line-height:1;
-}
-
-.lang-btn:hover,
-.lang-btn.active{
-    color:var(--gold);
-}
-
-.lang-divider{
-    color:rgba(255,255,255,.25);
-    font-size:12px;
-}
 
 @media(max-width:768px){
 
@@ -2326,3 +2277,131 @@ body.lightbox-open{
     }
 }
 
+/* ==========================================================
+   LANGUAGE SWITCH — RO / FR
+   CSS flags + automatic contrast on light/dark header states
+========================================================== */
+
+.language-switch{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    white-space:nowrap;
+    margin-left:4px;
+}
+
+.lang-btn{
+    appearance:none;
+    -webkit-appearance:none;
+    border:0;
+    background:transparent;
+    color:#fff;
+    padding:5px 2px;
+    font:inherit;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    transition:color .25s ease, opacity .25s ease;
+}
+
+.lang-btn .flag{
+    display:inline-block;
+    width:20px;
+    height:13px;
+    flex:0 0 20px;
+    border-radius:1px;
+    box-shadow:0 0 0 1px rgba(0,0,0,.12);
+    overflow:hidden;
+    position:relative;
+}
+
+.flag-ro{
+    background:linear-gradient(
+        to right,
+        #002B7F 0 33.333%,
+        #FCD116 33.333% 66.666%,
+        #CE1126 66.666% 100%
+    );
+}
+
+.flag-fr{
+    background:linear-gradient(
+        to right,
+        #0055A4 0 33.333%,
+        #FFFFFF 33.333% 66.666%,
+        #EF4135 66.666% 100%
+    );
+}
+
+.lang-btn:hover,
+.lang-btn.active{
+    color:var(--gold);
+}
+
+.lang-btn.active{
+    opacity:1;
+}
+
+.lang-btn:not(.active){
+    opacity:.78;
+}
+
+.lang-divider{
+    color:rgba(255,255,255,.35);
+    font-size:12px;
+    transition:color .25s ease;
+}
+
+/* Header becomes light when it sits over a light section/background. */
+.site-header.light-header .lang-btn{
+    color:#171717;
+}
+
+.site-header.light-header .lang-btn:hover,
+.site-header.light-header .lang-btn.active{
+    color:var(--gold);
+}
+
+.site-header.light-header .lang-divider{
+    color:rgba(0,0,0,.25);
+}
+
+.site-header.light-header .flag{
+    box-shadow:0 0 0 1px rgba(0,0,0,.16);
+}
+
+/* If the existing header uses a solid background after scrolling,
+   keep the language controls readable there too. */
+.site-header.scrolled .lang-btn{
+    color:#171717;
+}
+
+.site-header.scrolled .lang-btn:hover,
+.site-header.scrolled .lang-btn.active{
+    color:var(--gold);
+}
+
+.site-header.scrolled .lang-divider{
+    color:rgba(0,0,0,.25);
+}
+
+@media(max-width:768px){
+    .language-switch{
+        margin-left:0;
+        margin-right:2px;
+    }
+
+    .lang-btn{
+        font-size:11px;
+    }
+
+    .lang-btn .flag{
+        width:18px;
+        height:12px;
+        flex-basis:18px;
+    }
+}

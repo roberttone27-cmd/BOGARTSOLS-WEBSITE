@@ -378,3 +378,27 @@ setLanguage(urlLanguage || savedLanguage || "ro", false);
 
 
 
+
+
+/* Header contrast for the language controls on light sections. */
+(function setupHeaderContrast(){
+    const header = document.querySelector(".site-header, header");
+    if (!header) return;
+
+    const updateHeaderContrast = () => {
+        const rect = header.getBoundingClientRect();
+        const x = Math.min(window.innerWidth - 2, Math.max(2, window.innerWidth * 0.78));
+        const y = Math.min(window.innerHeight - 2, Math.max(2, rect.bottom + 4));
+        const element = document.elementFromPoint(x, y);
+        const light = element && !!element.closest(
+            ".about, #despre, .services, #servicii, .projects, #proiecte, .contact, footer"
+        );
+        header.classList.toggle("light-header", !!light && rect.bottom > 0);
+        header.classList.toggle("scrolled", window.scrollY > 40);
+    };
+
+    updateHeaderContrast();
+    window.addEventListener("scroll", updateHeaderContrast, {passive:true});
+    window.addEventListener("resize", updateHeaderContrast);
+})();
+
