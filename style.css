@@ -2239,3 +2239,90 @@ body.lightbox-open{
     }
 }
 
+
+
+/* ==========================================================
+   LANGUAGE SWITCH — RO / FR
+========================================================== */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.language-switch{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    white-space:nowrap;
+    margin-left:4px;
+}
+
+.lang-btn{
+    appearance:none;
+    border:0;
+    background:transparent;
+    color:rgba(255,255,255,.62);
+    padding:4px 2px;
+    font:inherit;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    transition:.25s ease;
+}
+
+.lang-btn .flag{
+    font-size:16px;
+    line-height:1;
+}
+
+.lang-btn:hover,
+.lang-btn.active{
+    color:var(--gold);
+}
+
+.lang-divider{
+    color:rgba(255,255,255,.25);
+    font-size:12px;
+}
+
+@media(max-width:768px){
+
+    .header-container{
+        padding:15px 25px;
+    }
+
+    .header-right{
+        gap:15px;
+    }
+
+    .language-switch{
+        margin-left:0;
+        margin-right:2px;
+    }
+
+    .lang-btn{
+        font-size:11px;
+    }
+
+    .lang-btn .flag{
+        font-size:15px;
+    }
+
+    .menu-toggle{
+        border:0;
+        background:transparent;
+        padding:0;
+        line-height:1;
+    }
+
+    nav{
+        top:70px;
+    }
+}
+

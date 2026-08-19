@@ -17,17 +17,29 @@
             BOGARTSOLS
         </div>
 
-        <div class="menu-toggle">&#9776;</div>
+        <div class="header-right">
 
-        <nav>
+            <nav>
+                <a href="#" data-i18n="nav.home">Acasă</a>
+                <a href="#despre" data-i18n="nav.about">Despre</a>
+                <a href="#servicii" data-i18n="nav.services">Servicii</a>
+                <a href="#proiecte" data-i18n="nav.projects">Proiecte</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
 
-            <a href="#">Acasă</a>
-            <a href="#despre">Despre</a>
-            <a href="#servicii">Servicii</a>
-            <a href="#proiecte">Proiecte</a>
-            <a href="#contact">Contact</a>
+            <div class="language-switch" aria-label="Selectează limba">
+                <button type="button" class="lang-btn active" data-lang="ro" aria-pressed="true">
+                    <span class="flag">🇷🇴</span><span>RO</span>
+                </button>
+                <span class="lang-divider">|</span>
+                <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">
+                    <span class="flag">🇫🇷</span><span>FR</span>
+                </button>
+            </div>
 
-        </nav>
+            <button class="menu-toggle" type="button" aria-label="Deschide meniul" aria-expanded="false">&#9776;</button>
+
+        </div>
 
     </div>
 
@@ -42,23 +54,23 @@
 
     <div class="hero-content">
 
-        <span class="hero-kicker">BOGARTSOLS • PARDOSERI PROFESIONALE</span>
+        <span class="hero-kicker" data-i18n="hero.kicker">BOGARTSOLS • PARDOSERI PROFESIONALE</span>
 
-        <h1>Construim<br><span>Performanță.</span></h1>
+        <h1><span data-i18n="hero.title1">Construim</span><br><span data-i18n="hero.title2">Performanță.</span></h1>
 
-        <p>
+        <p data-i18n="hero.description">
             Soluții profesionale de pardoseli pentru spitale,
             școli, universități și proiecte comerciale.
         </p>
 
         <div class="hero-actions">
             <a href="#proiecte" class="btn hero-btn">
-                Vezi proiectele
+                <span data-i18n="hero.projects">Vezi proiectele</span>
                 <i class="bi bi-arrow-right"></i>
             </a>
 
             <a href="#contact" class="hero-link">
-                Solicită o ofertă
+                <span data-i18n="hero.quote">Solicită o ofertă</span>
                 <i class="bi bi-arrow-up-right"></i>
             </a>
         </div>
@@ -66,8 +78,8 @@
     </div>
 
     <div class="hero-bottom">
-        <span>ROMÂNIA • FRANȚA</span>
-        <span class="hero-scroll">SCROLL <i class="bi bi-arrow-down"></i></span>
+        <span data-i18n="hero.countries">ROMÂNIA • FRANȚA</span>
+        <span class="hero-scroll"><span data-i18n="hero.scroll">SCROLL</span> <i class="bi bi-arrow-down"></i></span>
     </div>
 
 </section>
@@ -76,31 +88,31 @@
 
     <div class="ticker-track">
 
-        <span><i class="bi bi-building"></i> Pardoseli PVC</span>
+        <span><i class="bi bi-building"></i><span data-i18n="ticker.pvc">Pardoseli PVC</span></span>
 
-        <span><i class="bi bi-grid-3x3-gap-fill"></i> Linoleum</span>
+        <span><i class="bi bi-grid-3x3-gap-fill"></i><span data-i18n="ticker.linoleum">Linoleum</span></span>
 
-        <span><i class="bi bi-layers-fill"></i> Mochetă profesională</span>
+        <span><i class="bi bi-layers-fill"></i><span data-i18n="ticker.carpet">Mochetă profesională</span></span>
 
-        <span><i class="bi bi-hammer"></i> Pardoseli epoxidice</span>
+        <span><i class="bi bi-hammer"></i><span data-i18n="ticker.epoxy">Pardoseli epoxidice</span></span>
 
-        <span><i class="bi bi-check2-circle"></i> Montaj profesional</span>
+        <span><i class="bi bi-check2-circle"></i><span data-i18n="ticker.installation">Montaj profesional</span></span>
 
-        <span><i class="bi bi-rulers"></i> Măsurători precise</span>
+        <span><i class="bi bi-rulers"></i><span data-i18n="ticker.measurements">Măsurători precise</span></span>
 
         <!-- Repetăm pentru animație -->
 
-        <span><i class="bi bi-building"></i> Pardoseli PVC</span>
+        <span><i class="bi bi-building"></i><span data-i18n="ticker.pvc">Pardoseli PVC</span></span>
 
-        <span><i class="bi bi-grid-3x3-gap-fill"></i> Linoleum</span>
+        <span><i class="bi bi-grid-3x3-gap-fill"></i><span data-i18n="ticker.linoleum">Linoleum</span></span>
 
-        <span><i class="bi bi-layers-fill"></i> Mochetă profesională</span>
+        <span><i class="bi bi-layers-fill"></i><span data-i18n="ticker.carpet">Mochetă profesională</span></span>
 
-        <span><i class="bi bi-hammer"></i> Pardoseli epoxidice</span>
+        <span><i class="bi bi-hammer"></i><span data-i18n="ticker.epoxy">Pardoseli epoxidice</span></span>
 
-        <span><i class="bi bi-check2-circle"></i> Montaj profesional</span>
+        <span><i class="bi bi-check2-circle"></i><span data-i18n="ticker.installation">Montaj profesional</span></span>
 
-        <span><i class="bi bi-rulers"></i> Măsurători precise</span>
+        <span><i class="bi bi-rulers"></i><span data-i18n="ticker.measurements">Măsurători precise</span></span>
 
     </div>
 
@@ -110,22 +122,22 @@
 
     <div class="stat">
         <h2 class="counter" data-target="200000">0</h2>
-        <p>m² executați</p>
+        <p data-i18n="stats.area">m² executați</p>
     </div>
 
     <div class="stat">
         <h2 class="counter" data-target="40">0</h2>
-        <p>Proiecte finalizate</p>
+        <p data-i18n="stats.projects">Proiecte finalizate</p>
     </div>
 
     <div class="stat">
         <h2>🇷🇴 🇫🇷</h2>
-        <p>România • Franța</p>
+        <p data-i18n="stats.countries">România • Franța</p>
     </div>
 
     <div class="stat">
         <h2 class="counter" data-target="10">0</h2>
-        <p>Ani de experiență</p>
+        <p data-i18n="stats.experience">Ani de experiență</p>
     </div>
 
 </section>
@@ -138,22 +150,22 @@
             <img src="images/spital1.png" alt="Proiect BOGARTSOLS - pardoseli profesionale">
             <div class="about-badge">
                 <strong>10+</strong>
-                <span>ANI DE<br>EXPERIENȚĂ</span>
+                <span data-i18n="about.badge">ANI DE<br>EXPERIENȚĂ</span>
             </div>
         </div>
 
         <div class="about-content">
 
-            <span class="about-kicker">DESPRE BOGARTSOLS</span>
+            <span class="about-kicker" data-i18n="about.kicker">DESPRE BOGARTSOLS</span>
 
             <h2>Experiență care se vede în fiecare <span>suprafață.</span></h2>
 
-            <p class="about-lead">
+            <p class="about-lead" data-i18n="about.lead">
                 BOGARTSOLS oferă soluții complete pentru montajul pardoselilor
                 profesionale, de la pregătirea suprafeței până la finisajul final.
             </p>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="about.description">
                 Lucrăm pentru proiecte în care precizia, rezistența și aspectul
                 final contează. Experiența acumulată în România și Franța ne
                 permite să abordăm proiecte diverse, cu atenție la fiecare detaliu.
@@ -162,24 +174,24 @@
             <div class="about-points">
                 <div>
                     <i class="bi bi-check2"></i>
-                    <span>Execuție profesională</span>
+                    <span data-i18n="about.point1">Execuție profesională</span>
                 </div>
                 <div>
                     <i class="bi bi-check2"></i>
-                    <span>Materiale și soluții adaptate proiectului</span>
+                    <span data-i18n="about.point2">Materiale și soluții adaptate proiectului</span>
                 </div>
                 <div>
                     <i class="bi bi-check2"></i>
-                    <span>Respectarea termenelor</span>
+                    <span data-i18n="about.point3">Respectarea termenelor</span>
                 </div>
                 <div>
                     <i class="bi bi-check2"></i>
-                    <span>Proiecte în România și Franța</span>
+                    <span data-i18n="about.point4">Proiecte în România și Franța</span>
                 </div>
             </div>
 
             <a href="#contact" class="about-link">
-                Hai să discutăm despre proiectul tău
+                <span data-i18n="about.cta">Hai să discutăm despre proiectul tău</span>
                 <i class="bi bi-arrow-right"></i>
             </a>
 
@@ -193,14 +205,17 @@
 
     <div class="services-heading">
         <div>
-            <span class="services-kicker">SERVICII</span>
+            <span class="services-kicker" data-i18n="services.kicker">SERVICII</span>
             <h2>Soluții pentru fiecare<br><span>proiect.</span></h2>
         </div>
 
-        <p>
+        <span data-i18n="<p data-i18n="services.description">
             Alegem soluția potrivită în funcție de spațiu, trafic,
             cerințele tehnice și nivelul de finisare dorit.
-        </p>
+        </p>"><p>
+            Alegem soluția potrivită în funcție de spațiu, trafic,
+            cerințele tehnice și nivelul de finisare dorit.
+        </p></span>
     </div>
 
     <div class="services-grid">
@@ -214,8 +229,8 @@
             </div>
             <div class="service-body">
                 <div class="service-icon"><i class="bi bi-droplet-half"></i></div>
-                <h3>Pardoseli epoxidice</h3>
-                <p>Soluții rezistente pentru spații industriale, comerciale și zone cu trafic intens.</p>
+                <h3 data-i18n="service.epoxy.title">Pardoseli epoxidice</h3>
+                <p data-i18n="service.epoxy.text">Soluții rezistente pentru spații industriale, comerciale și zone cu trafic intens.</p>
             </div>
         </article>
 
@@ -228,8 +243,8 @@
             </div>
             <div class="service-body">
                 <div class="service-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
-                <h3>Pardoseli PVC</h3>
-                <p>Montaj profesional pentru spații medicale, comerciale, birouri și proiecte complexe.</p>
+                <h3 data-i18n="service.pvc.title">Pardoseli PVC</h3>
+                <p data-i18n="service.pvc.text">Montaj profesional pentru spații medicale, comerciale, birouri și proiecte complexe.</p>
             </div>
         </article>
 
@@ -242,8 +257,8 @@
             </div>
             <div class="service-body">
                 <div class="service-icon"><i class="bi bi-layout-text-window"></i></div>
-                <h3>Linoleum</h3>
-                <p>Suprafețe durabile și ușor de întreținut, ideale pentru proiecte cu cerințe ridicate.</p>
+                <h3 data-i18n="service.linoleum.title">Linoleum</h3>
+                <p data-i18n="service.linoleum.text">Suprafețe durabile și ușor de întreținut, ideale pentru proiecte cu cerințe ridicate.</p>
             </div>
         </article>
 
@@ -256,15 +271,15 @@
             </div>
             <div class="service-body">
                 <div class="service-icon"><i class="bi bi-layers-fill"></i></div>
-                <h3>Mochetă profesională</h3>
-                <p>Confort și finisaje premium pentru birouri, hoteluri și spații reprezentative.</p>
+                <h3 data-i18n="service.carpet.title">Mochetă profesională</h3>
+                <p data-i18n="service.carpet.text">Confort și finisaje premium pentru birouri, hoteluri și spații reprezentative.</p>
             </div>
         </article>
 
     </div>
 
     <div class="services-cta">
-        <span>Nu știi ce soluție se potrivește proiectului tău?</span>
+        <span data-i18n="services.cta">Nu știi ce soluție se potrivește proiectului tău?</span>
         <a href="#contact">Vorbește cu noi <i class="bi bi-arrow-right"></i></a>
     </div>
 
@@ -273,47 +288,47 @@
 <section class="advantages animate">
 
     <div class="section-title">
-        <span>DE CE NOI</span>
-        <h2>De ce să alegi BOGARTSOLS?</h2>
-        <p>Experiență, seriozitate și calitate în fiecare proiect.</p>
+        <span data-i18n="advantages.kicker">DE CE NOI</span>
+        <h2 data-i18n="advantages.title">De ce să alegi BOGARTSOLS?</h2>
+        <p data-i18n="advantages.description">Experiență, seriozitate și calitate în fiecare proiect.</p>
     </div>
 
     <div class="advantages-grid">
 
         <div class="adv-card animate">
             <i class="bi bi-award-fill"></i>
-            <h3>10+ ani experiență</h3>
-            <p>Experiență în proiecte rezidențiale, comerciale și medicale.</p>
+            <h3 data-i18n="adv.1.title">10+ ani experiență</h3>
+            <p data-i18n="adv.1.text">Experiență în proiecte rezidențiale, comerciale și medicale.</p>
         </div>
 
         <div class="adv-card animate">
             <i class="bi bi-building-check"></i>
-            <h3>200.000+ m² executați</h3>
-            <p>Mii de metri pătrați montați cu atenție la fiecare detaliu.</p>
+            <h3 data-i18n="adv.2.title">200.000+ m² executați</h3>
+            <p data-i18n="adv.2.text">Mii de metri pătrați montați cu atenție la fiecare detaliu.</p>
         </div>
 
         <div class="adv-card animate">
             <i class="bi bi-globe-europe-africa"></i>
-            <h3>România & Franța</h3>
-            <p>Proiecte realizate atât în țară, cât și în străinătate.</p>
+            <h3 data-i18n="adv.3.title">România & Franța</h3>
+            <p data-i18n="adv.3.text">Proiecte realizate atât în țară, cât și în străinătate.</p>
         </div>
 
         <div class="adv-card animate">
             <i class="bi bi-check2-circle"></i>
-            <h3>Calitate garantată</h3>
-            <p>Materiale premium și execuție la cele mai înalte standarde.</p>
+            <h3 data-i18n="adv.4.title">Calitate garantată</h3>
+            <p data-i18n="adv.4.text">Materiale premium și execuție la cele mai înalte standarde.</p>
         </div>
 
         <div class="adv-card animate">
             <i class="bi bi-clock-history"></i>
-            <h3>Respectarea termenelor</h3>
-            <p>Planificare eficientă și livrare conform angajamentelor.</p>
+            <h3 data-i18n="adv.5.title">Respectarea termenelor</h3>
+            <p data-i18n="adv.5.text">Planificare eficientă și livrare conform angajamentelor.</p>
         </div>
 
         <div class="adv-card animate">
             <i class="bi bi-people-fill"></i>
-            <h3>Echipă profesionistă</h3>
-            <p>Specialiști cu experiență în montajul pardoselilor profesionale.</p>
+            <h3 data-i18n="adv.6.title">Echipă profesionistă</h3>
+            <p data-i18n="adv.6.text">Specialiști cu experiență în montajul pardoselilor profesionale.</p>
         </div>
 
     </div>
@@ -321,20 +336,20 @@
 </section>
 
 <section id="proiecte" class="projects projects-editorial animate"><div class="container">
-<div class="projects-intro"><span class="projects-kicker">PORTOFOLIU</span><h2>Proiectele <span>noastre</span></h2><p>O selecție de lucrări realizate de echipa BOGARTSOLS, cu atenție pentru fiecare detaliu și fiecare suprafață.</p></div>
-<article class="project-showcase"><div class="project-heading"><div><span class="project-index">01</span><h3>Spitale și clinici</h3></div><span class="project-type">PROIECTE MEDICALE</span></div><div class="project-gallery gallery-three"><div class="gallery-main project-image"><img src="images/spital1.png" alt="Pardoseli profesionale - spitale și clinici"></div><div class="gallery-side"><div class="project-image"><img src="images/spital2.png" alt="Pardoseli profesionale - spital"></div><div class="project-image"><img src="images/spital3.png" alt="Pardoseli profesionale - clinică"></div></div></div></article>
-<article class="project-showcase"><div class="project-heading"><div><span class="project-index">02</span><h3>Scări PVC</h3></div><span class="project-type">FINISAJE PROFESIONALE</span></div><div class="project-gallery gallery-two"><div class="project-image"><img src="images/scari1.png" alt="Scări PVC - BOGARTSOLS"></div><div class="project-image"><img src="images/scari2.png" alt="Finisaje scări PVC - BOGARTSOLS"></div></div></article>
-<article class="project-showcase"><div class="project-heading"><div><span class="project-index">03</span><h3>Pardoseli LVT</h3></div><span class="project-type">LVT</span></div><div class="project-gallery gallery-two"><div class="project-image"><img src="images/lvt1.png" alt="Pardoseli LVT - BOGARTSOLS"></div><div class="project-image"><img src="images/LVT2.png" alt="Pardoseli LVT - BOGARTSOLS"></div></div></article>
-<article class="project-showcase"><div class="project-heading"><div><span class="project-index">04</span><h3>Cămine și școli</h3></div><span class="project-type">EDUCAȚIONAL</span></div><div class="project-gallery gallery-three"><div class="gallery-main project-image"><img src="images/camin1.png" alt="Cămine și școli - BOGARTSOLS"></div><div class="gallery-side"><div class="project-image"><img src="images/camin2.png" alt="Cămin - BOGARTSOLS"></div><div class="project-image"><img src="images/camin3.png" alt="Școală - BOGARTSOLS"></div></div></div></article>
-<article class="project-showcase"><div class="project-heading"><div><span class="project-index">05</span><h3>Cinema</h3></div><span class="project-type">SPAȚII COMERCIALE</span></div><div class="project-gallery gallery-three"><div class="gallery-main project-image"><img src="images/cinema1.png" alt="Proiect cinema - BOGARTSOLS"></div><div class="gallery-side"><div class="project-image"><img src="images/cinema2.png" alt="Proiect cinema - BOGARTSOLS"></div><div class="project-image"><img src="images/cinema3.png" alt="Proiect cinema - BOGARTSOLS"></div></div></div></article>
+<div class="projects-intro"><span class="projects-kicker" data-i18n="projects.kicker">PORTOFOLIU</span><h2 data-i18n="projects.title">Proiectele <span>noastre</span></h2><p data-i18n="projects.description">O selecție de lucrări realizate de echipa BOGARTSOLS, cu atenție pentru fiecare detaliu și fiecare suprafață.</p></div>
+<article class="project-showcase"><div class="project-heading"><div><span class="project-index">01</span><h3 data-i18n="project.1.title">Spitale și clinici</h3></div><span class="project-type" data-i18n="project.1.type">PROIECTE MEDICALE</span></div><div class="project-gallery gallery-three"><div class="gallery-main project-image"><img src="images/spital1.png" alt="Pardoseli profesionale - spitale și clinici"></div><div class="gallery-side"><div class="project-image"><img src="images/spital2.png" alt="Pardoseli profesionale - spital"></div><div class="project-image"><img src="images/spital3.png" alt="Pardoseli profesionale - clinică"></div></div></div></article>
+<article class="project-showcase"><div class="project-heading"><div><span class="project-index">02</span><h3 data-i18n="project.2.title">Scări PVC</h3></div><span class="project-type" data-i18n="project.2.type">FINISAJE PROFESIONALE</span></div><div class="project-gallery gallery-two"><div class="project-image"><img src="images/scari1.png" alt="Scări PVC - BOGARTSOLS"></div><div class="project-image"><img src="images/scari2.png" alt="Finisaje scări PVC - BOGARTSOLS"></div></div></article>
+<article class="project-showcase"><div class="project-heading"><div><span class="project-index">03</span><h3 data-i18n="project.3.title">Pardoseli LVT</h3></div><span class="project-type" data-i18n="project.3.type">LVT</span></div><div class="project-gallery gallery-two"><div class="project-image"><img src="images/lvt1.png" alt="Pardoseli LVT - BOGARTSOLS"></div><div class="project-image"><img src="images/LVT2.png" alt="Pardoseli LVT - BOGARTSOLS"></div></div></article>
+<article class="project-showcase"><div class="project-heading"><div><span class="project-index">04</span><h3 data-i18n="project.4.title">Cămine și școli</h3></div><span class="project-type" data-i18n="project.4.type">EDUCAȚIONAL</span></div><div class="project-gallery gallery-three"><div class="gallery-main project-image"><img src="images/camin1.png" alt="Cămine și școli - BOGARTSOLS"></div><div class="gallery-side"><div class="project-image"><img src="images/camin2.png" alt="Cămin - BOGARTSOLS"></div><div class="project-image"><img src="images/camin3.png" alt="Școală - BOGARTSOLS"></div></div></div></article>
+<article class="project-showcase"><div class="project-heading"><div><span class="project-index">05</span><h3 data-i18n="project.5.title">Cinema</h3></div><span class="project-type" data-i18n="project.5.type">SPAȚII COMERCIALE</span></div><div class="project-gallery gallery-three"><div class="gallery-main project-image"><img src="images/cinema1.png" alt="Proiect cinema - BOGARTSOLS"></div><div class="gallery-side"><div class="project-image"><img src="images/cinema2.png" alt="Proiect cinema - BOGARTSOLS"></div><div class="project-image"><img src="images/cinema3.png" alt="Proiect cinema - BOGARTSOLS"></div></div></div></article>
 </div></section>
 
 <section id="contact" class="contact animate">
-<div class="section-title"><span>CONTACT</span><h2>Hai să discutăm despre proiectul tău</h2></div>
+<div class="section-title"><span data-i18n="contact.kicker">CONTACT</span><h2 data-i18n="contact.title">Hai să discutăm despre proiectul tău</h2></div>
 
 <a class="btn" href="tel:+40769234811">
     <i class="bi bi-telephone-fill"></i>
-    Contactează-ne
+    <span data-i18n="contact.button">Contactează-ne</span>
 </a>
 
 
@@ -348,7 +363,7 @@
 
             <h2 class="footer-title">BOGARTSOLS</h2>
 
-            <p>
+            <p data-i18n="footer.description">
                 Pardoseli profesionale pentru spitale, școli,
                 universități și proiecte comerciale.
             </p>
@@ -357,25 +372,25 @@
 
         <div class="footer-col">
 
-            <h3>Contact</h3>
+            <h3 data-i18n="footer.contact">Contact</h3>
 
             <p><i class="bi bi-telephone-fill"></i> +40 769 234 811</p>
 
             <p><i class="bi bi-envelope-fill"></i> bogartsols@gmail.com</p>
 
-            <p><i class="bi bi-geo-alt-fill"></i> România • Franța</p>
+            <p><i class="bi bi-geo-alt-fill"></i> <span data-i18n="footer.countries">România • Franța</span></p>
 
         </div>
 
         <div class="footer-col">
 
-            <h3>Navigare</h3>
+            <h3 data-i18n="footer.navigation">Navigare</h3>
 
-            <a href="#">Acasă</a>
-            <a href="#despre">Despre</a>
-            <a href="#servicii">Servicii</a>
-            <a href="#proiecte">Proiecte</a>
-            <a href="#contact">Contact</a>
+            <a href="#" data-i18n="nav.home">Acasă</a>
+            <a href="#despre" data-i18n="nav.about">Despre</a>
+            <a href="#servicii" data-i18n="nav.services">Servicii</a>
+            <a href="#proiecte" data-i18n="nav.projects">Proiecte</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
 
         </div>
 
@@ -383,7 +398,7 @@
 
     <div class="footer-bottom">
 
-        © 2026 BOGARTSOLS. Toate drepturile rezervate.
+        <span data-i18n="footer.copyright">© 2026 BOGARTSOLS. Toate drepturile rezervate.</span>
 
     </div>
 
@@ -398,13 +413,6 @@
     <i class="bi bi-whatsapp"></i>
 </a>
 
-<div class="lightbox" id="lightbox">
-
-    <button class="close-lightbox" type="button" aria-label="Închide imaginea">&times;</button>
-
-    <img id="lightbox-img" src="" alt="">
-
-</div>
 
 </body>
 </html>
