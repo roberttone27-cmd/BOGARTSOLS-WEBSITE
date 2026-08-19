@@ -168,6 +168,7 @@ const translations = {
         "stats.experience": "Ani de experiență",
 
         "about.kicker": "DESPRE BOGARTSOLS",
+        "about.title": "Experiență care se vede în fiecare <span>suprafață.</span>",
         "about.titleAccent": "suprafață.",
         "about.lead": "BOGARTSOLS oferă soluții complete pentru montajul pardoselilor profesionale, de la pregătirea suprafeței până la finisajul final.",
         "about.description": "Lucrăm pentru proiecte în care precizia, rezistența și aspectul final contează. Experiența acumulată în România și Franța ne permite să abordăm proiecte diverse, cu atenție la fiecare detaliu.",
@@ -179,6 +180,7 @@ const translations = {
         "about.cta": "Hai să discutăm despre proiectul tău",
 
         "services.kicker": "SERVICII",
+        "services.title": "Soluții pentru fiecare<br><span>proiect.</span>",
         "services.titleAccent": "proiect.",
         "services.description": "Alegem soluția potrivită în funcție de spațiu, trafic, cerințele tehnice și nivelul de finisare dorit.",
         "service.epoxy.title": "Pardoseli epoxidice",
@@ -262,6 +264,7 @@ const translations = {
         "stats.experience": "Années d'expérience",
 
         "about.kicker": "À PROPOS DE BOGARTSOLS",
+        "about.title": "Une expérience qui se voit sur chaque <span>surface.</span>",
         "about.titleAccent": "surface.",
         "about.lead": "BOGARTSOLS propose des solutions complètes pour la pose de revêtements de sol professionnels, de la préparation de la surface jusqu'à la finition finale.",
         "about.description": "Nous réalisons des projets où la précision, la résistance et la qualité de finition comptent. Notre expérience en Roumanie et en France nous permet d'aborder des projets variés avec une attention particulière portée à chaque détail.",
@@ -273,6 +276,7 @@ const translations = {
         "about.cta": "Parlons de votre projet",
 
         "services.kicker": "SERVICES",
+        "services.title": "Des solutions pour chaque<br><span>projet.</span>",
         "services.titleAccent": "projet.",
         "services.description": "Nous choisissons la solution adaptée selon l'espace, le trafic, les exigences techniques et le niveau de finition souhaité.",
         "service.epoxy.title": "Revêtements époxy",
@@ -372,3 +376,21 @@ const urlLanguage = new URLSearchParams(window.location.search).get("lang");
 const savedLanguage = localStorage.getItem("bogartsols-language");
 setLanguage(urlLanguage || savedLanguage || "ro", false);
 
+
+
+/* Development helper: run checkFrenchPage() in the console to spot obvious Romanian leftovers. */
+function checkFrenchPage() {
+    const roWords = [
+        " și ", " pentru ", " proiect", " pardos", " experien", " contact",
+        " servicii", " realizate", " echipă", " ani ", " România", " Franța",
+        " școli", " spitale", " moche", " linoleum", " scări", " calitate",
+        " termen", " ofertă", " discutăm", " noi"
+    ];
+
+    const text = document.body.innerText.toLowerCase();
+    const found = roWords.filter(word => text.includes(word.toLowerCase()));
+
+    console.log(found.length
+        ? "Posibile texte românești rămase: " + found.join(", ")
+        : "Nu am găsit expresiile românești urmărite.");
+}
