@@ -136,50 +136,65 @@ window.addEventListener("scroll", () => {
 
 // LIGHTBOX
 
-const cards = document.querySelectorAll(".project-card img");
-
 const lightbox = document.getElementById("lightbox");
-
 const lightboxImg = document.getElementById("lightbox-img");
-
 const closeBtn = document.querySelector(".close-lightbox");
 
-cards.forEach(img => {
-
-    img.addEventListener("click", () => {
-
-        lightbox.classList.add("active");
-
-        lightboxImg.src = img.src;
-
-    });
-
-});
-
-closeBtn.addEventListener("click", () => {
+function closeLightbox() {
+    if (!lightbox) return;
 
     lightbox.classList.remove("active");
+    document.body.classList.remove("lightbox-open");
 
-});
+    // Clear the image after the fade-out so it cannot remain visible.
+    window.setTimeout(() => {
+        if (!lightbox.classList.contains("active") && lightboxImg) {
+            lightboxImg.src = "";
+        }
+    }, 350);
+}
 
-lightbox.addEventListener("click", e => {
+function openLightbox(src, alt = "") {
+    if (!lightbox || !lightboxImg) return;
 
-    if(e.target === lightbox){
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox.classList.add("active");
+    document.body.classList.add("lightbox-open");
+}
 
-        lightbox.classList.remove("active");
+if (closeBtn) {
+    closeBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeLightbox();
+    });
+}
 
+if (lightbox) {
+    lightbox.addEventListener("click", function (e) {
+        // Clicking the dark area closes it; clicking the image does not.
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+}
+
+// ESC always closes the active lightbox.
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && lightbox && lightbox.classList.contains("active")) {
+        e.preventDefault();
+        closeLightbox();
     }
-
 });
 
-document.addEventListener("keydown", e => {
+// Supports all project images, including the new editorial portfolio.
+document.addEventListener("click", function (e) {
+    const image = e.target.closest(".project-image img, .project-card img");
 
-    if(e.key === "Escape"){
+    if (!image) return;
 
-        lightbox.classList.remove("active");
-
-    }
-
+    e.preventDefault();
+    openLightbox(image.currentSrc || image.src, image.alt || "");
 });
 
-function openProjectImage(image){const lightbox=document.getElementById("lightbox");const lightboxImg=document.getElementById("lightbox-img");if(!lightbox||!lightboxImg)return;lightboxImg.src=image.src;lightboxImg.alt=image.alt||"";lightbox.classList.add("active");}

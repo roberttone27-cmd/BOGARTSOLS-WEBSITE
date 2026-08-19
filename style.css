@@ -2144,3 +2144,31 @@ footer{
     }
 }
 
+
+/* LIGHTBOX CLOSE BUTTON */
+.close-lightbox{
+    appearance:none;
+    -webkit-appearance:none;
+    border:0;
+    background:transparent;
+    position:absolute;
+    top:25px;
+    right:35px;
+    z-index:2;
+    color:#fff;
+    font:inherit;
+    font-size:48px;
+    line-height:1;
+    padding:8px 12px;
+    margin:0;
+    cursor:pointer;
+    user-select:none;
+}
+
+.close-lightbox:hover{
+    color:var(--gold);
+}
+
+body.lightbox-open{
+    overflow:hidden;
+}
