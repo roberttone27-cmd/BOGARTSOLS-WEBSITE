@@ -146,7 +146,7 @@ const translations = {
         "nav.projects": "Proiecte",
         "nav.contact": "Contact",
 
-        "hero.kicker": "BOGARTSOLS • PARDOSERI PROFESIONALE",
+        "hero.kicker": "BOGARTSOLS • PARDOSELI PROFESIONALE",
         "hero.title1": "Construim",
         "hero.title2": "Performanță.",
         "hero.description": "Soluții profesionale de pardoseli pentru spitale, școli, universități și proiecte comerciale.",
